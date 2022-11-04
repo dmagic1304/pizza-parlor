@@ -18,8 +18,8 @@ function getSize(userInput) {
 }
 
 function getToppings(userCheckboxSelection) {
-  let pizzaTopings = Array.from(userCheckboxSelection);
-  return pizzaTopings;
+  let pizzaTopingsArr = Array.from(userCheckboxSelection);
+  return pizzaTopingsArr;
 }
 
 function toppingsTotal(pizzaTopingsArr) {
@@ -29,3 +29,4 @@ function toppingsTotal(pizzaTopingsArr) {
   }
   return toppingsTotal;
 }
+
