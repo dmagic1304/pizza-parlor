@@ -46,7 +46,7 @@ function handleSubmit(e) {
 //UI Logic
 
 function displayCost(totalCost) {
-  document.getElementById('price-output').innerText = totalCost;
+  document.getElementById('price-output').innerText = '$' + totalCost;
 }
 
 function noToppingsError() {
