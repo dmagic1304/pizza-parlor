@@ -8,7 +8,7 @@ function getSize(userInput) {
   return pizzaSize;
 }
 
-function getToppings(userSelection) {
-  let pizzaTopings = userSelection;
+function getToppings(userSelectionArr) {
+  let pizzaTopings = userSelectionArr;
   return pizzaTopings;
 }
