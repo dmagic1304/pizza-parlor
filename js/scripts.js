@@ -19,3 +19,11 @@ function getToppings(userCheckboxSelection) {
   let pizzaTopings = Array.from(userCheckboxSelection);
   return pizzaTopings;
 }
+
+function toppingsTotal(pizzaTopingsArr) {
+  let toppingsTotal = 0;
+  for (let i = 0; i < pizzaTopingsArr.length; i++) {
+    toppingsTotal += pizzaTopingsArr[i];
+  }
+  return toppingsTotal;
+}
