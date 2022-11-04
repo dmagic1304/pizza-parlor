@@ -93,6 +93,12 @@ Describe: Cart()
 Test1: "It should return a Cart object with one propertie that is set to empty array"
 Code: const cart = new Cart();
 Expected Output: Cart {pizzas: []}
+
+Describe: Cart.prototype.addPizza()
+
+Test1: "It will add input(pizza) to the pizzas property array"
+Code: Cart.prototype.addPizza(pizza1);
+Expected Output: Cart = {pizzas=[pizza1]};
 ```
 
 ## Known Bugs
