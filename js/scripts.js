@@ -18,6 +18,10 @@ function Cart() {
   this.pizzas = [];
 }
 
+Cart.prototype.addPizza = function(pizza) {
+  this.pizzas.push(pizza);
+}
+
 function getSize(userInput) {
   let pizzaSize = userInput.value;
   return pizzaSize;
