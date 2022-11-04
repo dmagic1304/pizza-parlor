@@ -36,6 +36,12 @@ function handleSubmit() {
   let toppingInput = getToppings(userSelection);
   let myPizza = new Pizza (sizeInput, toppingInput);
   let totalCost = myPizza.getCost(sizeInput, toppingInput);
-  
+  displayCost(totalCost);
 }
 
+
+//UI Logic
+
+function displayCost(totalCost) {
+  
+}
