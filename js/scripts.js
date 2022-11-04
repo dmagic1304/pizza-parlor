@@ -8,7 +8,7 @@ function getSize(userInput) {
   return pizzaSize;
 }
 
-function getToppings(userSelectionArr) {
-  let pizzaTopings = userSelectionArr;
+function getToppings(userCheckboxSelection) {
+  let pizzaTopings = Array.from(userCheckboxSelection);
   return pizzaTopings;
 }
