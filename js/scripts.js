@@ -5,10 +5,9 @@ function Pizza(size, toppings) {
   this.toppings = toppings;
 }
 
-Pizza.prototype.getCost = function(size, toppings) {
-  let sizeCost = size;
-  let toppingsCost = toppingsTotal(toppings);
-  let totalCost = parseInt(sizeCost) + parseInt(toppingsCost)
+Pizza.prototype.getCost = function() {
+  let toppingsCost = toppingsTotal(this.toppings);
+  let totalCost = parseInt(this.size) + parseInt(toppingsCost)
   return totalCost;
 }
 
