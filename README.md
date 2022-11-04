@@ -28,6 +28,6 @@ Expected Output: let pizzaToppings = ['pepperoni', 'cheese', 'onion']
 
 Describe: Pizza.prototype.getCost()
 
-Test1: "It will assigh user pizza size input as size property of the pizza object"
+Test1: "It will store pizza size value as a sizeCost variable"
 Code: myPizza.prototype.getCost('small');
-Expected Output: myPizza = {size = 'small'} 
+Expected Output: let sizeCost = 10 
