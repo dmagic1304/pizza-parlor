@@ -59,3 +59,7 @@ Expected Output: let toppingsInput = [value1, value2, value3];
 Test3: "It will create myPizza object using Pizza constructor and pass it size and toppings properties"
 Code: handleSubmit();
 Expected Output: myPizza = {'medium', [pepperoni, cheese, onions]}
+
+Test4: "It will pass the totalCost to displayCost() that will handle display on UI"
+Code: handleSubmit();
+Expected Output: totalCost value displayed on UI
