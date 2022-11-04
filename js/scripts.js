@@ -5,9 +5,10 @@ function Pizza(toppings, size) {
   this.size = size;
 }
 
-Pizza.prototype.getCost = function(size) {
+Pizza.prototype.getCost = function(size, toppings) {
   let sizeCost = size;
-  return sizeCost;
+  let toppingsCost = toppingsTotal(toppings);
+  return toppingsCost;
 }
 
 function getSize(userInput) {
