@@ -38,6 +38,7 @@ Test1: "It will store pizza size value as a sizeCost variable"
 Code: myPizza.prototype.getCost('small');
 Expected Output: let sizeCost = 10 
 
-<!-- Test2: "It will store pizza topings selection value as a toppingsCost variable"
-Code: myPizza.getCost([2, 3, 4]) -->
+Test2: "It will use toppingsTotal() to store pizza topings selection value as a toppingsCost variable and return it"
+Code: myPizza.getCost(size, toppingsArray = [1, 2, 3]);
+Expected Output: let toppingsCost = 6;
 
