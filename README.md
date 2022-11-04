@@ -42,3 +42,6 @@ Test2: "It will use toppingsTotal() to store pizza topings selection value as a 
 Code: myPizza.getCost(size, toppingsArray = [1, 2, 3]);
 Expected Output: let toppingsCost = 6;
 
+Test3: "it will return the total sum of the sizeCost and toppingsCost values"
+Code: myPizza.getCost(size = 10, toppingsArray = [1, 2, 3]):
+Expected Output: let totalCost = 16;
