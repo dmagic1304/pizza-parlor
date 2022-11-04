@@ -48,6 +48,6 @@ Expected Output: let totalCost = 16;
 
 Describe: handleSubmit()
 
-Test1: "It will store user inputed size value"
+Test1: "It will store user inputed size value using getSize()"
 Code: handleSubmit();
 Expected Output: let sizeInput = 'small'

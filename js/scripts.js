@@ -13,7 +13,7 @@ Pizza.prototype.getCost = function(size, toppings) {
 }
 
 function getSize(userInput) {
-  let pizzaSize = userInput;
+  let pizzaSize = userInput.value;
   return pizzaSize;
 }
 
@@ -28,5 +28,10 @@ function toppingsTotal(pizzaTopingsArr) {
     toppingsTotal += pizzaTopingsArr[i];
   }
   return toppingsTotal;
+}
+
+function handleSubmit() {
+  e.preventDefault();
+  let sizeInput = getSize(userInput);
 }
 
