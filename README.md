@@ -19,5 +19,9 @@ Code: getToppings(pepperoni);
 Expected Output: return let pizzaToppings = 'pepperoni'
 
 Test2: "It should take multiple user toppings input and return a variable with selected items in an array"
-Code: get Toppings('pepperoni', 'cheese', 'onion');
+Code: getToppings('pepperoni', 'cheese', 'onion');
 Expected Output: return let pizzaToppings = ['pepperoni', 'cheese', 'onion']
+
+Test3: "It will take in a NodeList element as input/argument, convert it into an array and return it"
+Code: getToppings([0: pepperoni, 1: cheese, 2: onions]);
+Expected Output: let pizzaToppings = ['pepperoni', 'cheese', 'onion']
