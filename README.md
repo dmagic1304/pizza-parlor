@@ -14,6 +14,6 @@ Expected Output: return let pizzaSize = 'small'
 
 Describe: getToppings()
 
-Test1: "It should take user pizza toppings input and store it as an array variable"
-Code: getToppings(pepperoni, cheese, onions);
-Expected Output: return let pizzaToppings = [pepperoni, cheese, onions];
+Test1: "It should take user pizza toppings input and return it as pizza topping variable"
+Code: getToppings(pepperoni);
+Expected Output: return let pizzaToppings = 'pepperoni'
