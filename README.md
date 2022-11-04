@@ -17,3 +17,7 @@ Describe: getToppings()
 Test1: "It should take user pizza toppings input and return it as pizza topping variable"
 Code: getToppings(pepperoni);
 Expected Output: return let pizzaToppings = 'pepperoni'
+
+Test2: "It should take multiple user toppings input and return a variable with selected items in an array"
+Code: get Toppings('pepperoni', 'cheese', 'onion');
+Expected Output: return let pizzaToppings = ['pepperoni', 'cheese', 'onion']
