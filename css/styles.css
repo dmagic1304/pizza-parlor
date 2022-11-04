@@ -12,11 +12,18 @@ body {
   background-color: rgba(240, 248, 255, 0.699);
 }
 
+.headder img {
+  height: 90px;
+  width: auto;
+}
+
 .main {
   background-color: rgba(0, 0, 0, 0.514);
   color: white;
 }
 
-#price-display {
+#price-display, #no-toppings {
   font-size: xx-large;
+  text-align: center;
 }
+
