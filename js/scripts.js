@@ -43,5 +43,10 @@ function handleSubmit() {
 //UI Logic
 
 function displayCost(totalCost) {
-  grab paragraph from index 
+  document.getElementById('price-output').innerText = totalCost;
 }
+
+window.addEventListener('load', function(){
+  let form = document.querySelector('form');
+  form.addEventListener('submit', handleSubmit);
+})
