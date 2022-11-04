@@ -51,3 +51,7 @@ Describe: handleSubmit()
 Test1: "It will store user inputed size value using getSize()"
 Code: handleSubmit();
 Expected Output: let sizeInput = 'small'
+
+Test2: "It will store users toppings selection as array using getToppings()"
+Code: handleSubmit();
+Expected Output: let toppingsInput = [value1, value2, value3];

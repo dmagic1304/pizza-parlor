@@ -33,5 +33,6 @@ function toppingsTotal(pizzaTopingsArr) {
 function handleSubmit() {
   e.preventDefault();
   let sizeInput = getSize(userInput);
+  
 }
 
