@@ -8,7 +8,7 @@ function Pizza(size, toppings) {
 Pizza.prototype.getCost = function(size, toppings) {
   let sizeCost = size;
   let toppingsCost = toppingsTotal(toppings);
-  let totalCost = sizeCost + toppingsCost
+  let totalCost = parseInt(sizeCost) + parseInt(toppingsCost)
   return totalCost;
 }
 
@@ -25,8 +25,9 @@ function getToppings(userCheckboxSelection) {
 function toppingsTotal(pizzaTopingsArr) {
   let toppingsTotal = 0;
   for (let i = 0; i < pizzaTopingsArr.length; i++) {
-    toppingsTotal += pizzaTopingsArr[i].value;
+    toppingsTotal += parseInt(pizzaTopingsArr[i].value);
   }
+  console.log('toppingsTotal ' + toppingsTotal);
   return toppingsTotal;
 }
 
@@ -36,7 +37,7 @@ function handleSubmit(e) {
   let toppingInput = getToppings(document.querySelectorAll('input[type=checkbox]:checked'));
   let myPizza = new Pizza (sizeInput, toppingInput);
   let totalCost = myPizza.getCost(sizeInput, toppingInput);
-  console.log('total cost' + totalCost);
+  console.log('total cost ' + totalCost);
   displayCost(totalCost);
 }
 
