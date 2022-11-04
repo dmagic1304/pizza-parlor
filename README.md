@@ -55,3 +55,7 @@ Expected Output: let sizeInput = 'small'
 Test2: "It will store users toppings selection as array using getToppings()"
 Code: handleSubmit();
 Expected Output: let toppingsInput = [value1, value2, value3];
+
+Test3: "It will create myPizza object using Pizza constructor and pass it size and toppings properties"
+Code: handleSubmit();
+Expected Output: myPizza = {'medium', [pepperoni, cheese, onions]}
