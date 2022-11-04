@@ -43,5 +43,5 @@ function handleSubmit() {
 //UI Logic
 
 function displayCost(totalCost) {
-  
+  grab paragraph from index 
 }
