@@ -34,6 +34,7 @@ function toppingsTotal(pizzaTopingsArr) {
 
 function handleSubmit(e) {
   e.preventDefault();
+  errorRemove();
   let sizeInput = getSize(document.querySelector('input[name=size]:checked'));
   let toppingInput = getToppings(document.querySelectorAll('input[type=checkbox]:checked'));
   let myPizza = new Pizza (sizeInput, toppingInput);
@@ -49,7 +50,11 @@ function displayCost(totalCost) {
 }
 
 function noToppingsError() {
-  document.getElementById('no-toppings').innerText = "You do you, but I would suggest adding at least one topping to your Pizza!"
+    document.getElementById('no-toppings').removeAttribute('class');
+}
+
+function errorRemove() {
+  document.getElementById('no-toppings').setAttribute('class', 'hidden');
 }
 
 window.addEventListener('load', function(){
