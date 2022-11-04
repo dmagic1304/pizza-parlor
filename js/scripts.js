@@ -53,6 +53,8 @@ function handleSubmit(e) {
 
 //UI Logic
 
+let cart = new Cart();
+
 function displayCost(totalCost) {
   document.getElementById('price-output').innerText = '$' + totalCost;
 }
