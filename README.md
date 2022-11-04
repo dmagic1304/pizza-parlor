@@ -87,6 +87,12 @@ Expected Output: myPizza = {'medium', [pepperoni, cheese, onions]}
 Test4: "It will pass the totalCost to displayCost() that will handle display on UI"
 Code: handleSubmit();
 Expected Output: totalCost value displayed on UI
+
+Describe: Cart()
+
+Test1: "It should return a Cart object with one propertie that is set to empty array"
+Code: const cart = new Cart();
+Expected Output: Cart {pizzas: []}
 ```
 
 ## Known Bugs

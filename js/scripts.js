@@ -14,6 +14,10 @@ Pizza.prototype.getCost = function() {
   return totalCost;
 }
 
+function Cart() {
+  this.pizzas = [];
+}
+
 function getSize(userInput) {
   let pizzaSize = userInput.value;
   return pizzaSize;
