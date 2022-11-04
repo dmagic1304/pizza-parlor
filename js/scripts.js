@@ -1,8 +1,8 @@
 //Bussiness Logic
 
-function Pizza(toppings, size) {
-  this.toppings = toppings;
+function Pizza(size, toppings) {
   this.size = size;
+  this.toppings = toppings;
 }
 
 Pizza.prototype.getCost = function(size, toppings) {
@@ -34,5 +34,8 @@ function handleSubmit() {
   e.preventDefault();
   let sizeInput = getSize(userInput);
   let toppingInput = getToppings(userSelection);
+  let myPizza = new Pizza (sizeInput, toppingInput);
+  let totalCost = myPizza.getCost(sizeInput, toppingInput);
+  
 }
 
