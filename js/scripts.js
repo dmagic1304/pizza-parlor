@@ -25,17 +25,18 @@ function getToppings(userCheckboxSelection) {
 function toppingsTotal(pizzaTopingsArr) {
   let toppingsTotal = 0;
   for (let i = 0; i < pizzaTopingsArr.length; i++) {
-    toppingsTotal += pizzaTopingsArr[i];
+    toppingsTotal += pizzaTopingsArr[i].value;
   }
   return toppingsTotal;
 }
 
-function handleSubmit() {
+function handleSubmit(e) {
   e.preventDefault();
-  let sizeInput = getSize(userInput);
-  let toppingInput = getToppings(userSelection);
+  let sizeInput = getSize(document.querySelector('input[name=size]:checked'));
+  let toppingInput = getToppings(document.querySelectorAll('input[type=checkbox]:checked'));
   let myPizza = new Pizza (sizeInput, toppingInput);
   let totalCost = myPizza.getCost(sizeInput, toppingInput);
+  console.log('total cost' + totalCost);
   displayCost(totalCost);
 }
 
