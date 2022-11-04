@@ -7,6 +7,9 @@ function Pizza(size, toppings) {
 
 Pizza.prototype.getCost = function() {
   let toppingsCost = toppingsTotal(this.toppings);
+  if (toppingsCost === 0) {
+    noToppingsError();
+  }
   let totalCost = parseInt(this.size) + parseInt(toppingsCost)
   return totalCost;
 }
@@ -26,7 +29,6 @@ function toppingsTotal(pizzaTopingsArr) {
   for (let i = 0; i < pizzaTopingsArr.length; i++) {
     toppingsTotal += parseInt(pizzaTopingsArr[i].value);
   }
-  console.log('toppingsTotal ' + toppingsTotal);
   return toppingsTotal;
 }
 
@@ -35,8 +37,7 @@ function handleSubmit(e) {
   let sizeInput = getSize(document.querySelector('input[name=size]:checked'));
   let toppingInput = getToppings(document.querySelectorAll('input[type=checkbox]:checked'));
   let myPizza = new Pizza (sizeInput, toppingInput);
-  let totalCost = myPizza.getCost(sizeInput, toppingInput);
-  console.log('total cost ' + totalCost);
+  let totalCost = myPizza.getCost();
   displayCost(totalCost);
 }
 
@@ -45,6 +46,10 @@ function handleSubmit(e) {
 
 function displayCost(totalCost) {
   document.getElementById('price-output').innerText = totalCost;
+}
+
+function noToppingsError() {
+  document.getElementById('no-toppings').innerText = "You do you, but I would suggest adding at least one topping to your Pizza!"
 }
 
 window.addEventListener('load', function(){

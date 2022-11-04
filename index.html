@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <link href="./css/styles.css" type="text/css" rel="stylesheet">
   <script src="js/scripts.js"></script>
   <title>Pizza Parlor</title>
@@ -9,18 +10,18 @@
  <div class="headder">
   <h1>Welcome to Dom's pizza!</h1>   
  </div>
- <div class="main">
+ <div class="main container">
   <div class="selection">
     <h2>Please select the size and topings you would like on you pizza</h2>
     <form>
       <h3>Pizza size:</h3>
       <label for="small">Small</label>
-      <input type="radio" id="small" name="size" value="10"><br>
+      <input type="radio" id="small" name="size" value="10" checked><br>
       <label for="medium">Medium</label>
       <input type="radio" id="medium" name="size" value="15"><br>
       <label for="large">Large</label>
       <input type="radio" id="large" name="size" value="20"><br>
-       
+      <h3>Toppings:</h3>
       <input type="checkbox" id="topping1" name="topping1" value="2">
       <label for="topping1">Pepperoni</label><br>
       <input type="checkbox" id="topping2" name="topping2" value="3">
@@ -41,6 +42,7 @@
   </div>
   <div class="output">
     <p>Total price is:<span id="price-output"></span></p>
+    <p id="no-toppings"></p>
   </div>
  </div>
 
