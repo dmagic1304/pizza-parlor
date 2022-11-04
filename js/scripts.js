@@ -1,6 +1,13 @@
+//Bussiness Logic
+
 function Pizza(toppings, size) {
   this.toppings = toppings;
   this.size = size;
+}
+
+Pizza.prototype.getCost = function(size) {
+  let sizeCost = size;
+  return sizeCost;
 }
 
 function getSize(userInput) {
