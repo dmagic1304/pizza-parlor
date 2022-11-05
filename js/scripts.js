@@ -97,7 +97,14 @@ function cartReset() {
   ul.innerHTML = ''
 }
 
+function clearCart() {
+  cart.clearCart();
+  cartReset();
+  displayCost();
+}
+
 window.addEventListener('load', function(){
   let form = document.querySelector('form');
   form.addEventListener('submit', handleSubmit);
+  document.getElementById('reset').addEventListener('click', clearCart);
 })
