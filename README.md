@@ -99,6 +99,12 @@ Describe: Cart.prototype.addPizza()
 Test1: "It will add input(pizza) to the pizzas property array"
 Code: Cart.prototype.addPizza(pizza1);
 Expected Output: Cart = {pizzas=[pizza1]};
+
+Describe: Cart.prototype.addId()
+
+Test1: "It will create new id and assign it to the pizza object"
+Code: Cart.prototype.addId();
+Expected Output: Cart = {pizzas=[pizza.id]}
 ```
 
 ## Known Bugs

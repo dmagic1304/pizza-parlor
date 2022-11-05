@@ -16,11 +16,14 @@ Pizza.prototype.getCost = function() {
 
 function Cart() {
   this.pizzas = [];
+  this.id = 0;
 }
 
 Cart.prototype.addPizza = function(pizza) {
   this.pizzas.push(pizza);
 }
+
+
 
 function getSize(userInput) {
   let pizzaSize = userInput.value;
@@ -48,6 +51,7 @@ function handleSubmit(e) {
   let myPizza = new Pizza (sizeInput, toppingInput);
   let totalCost = myPizza.getCost();
   cart.addPizza(myPizza);
+  cartReset();
   cartDisplay();
   displayCost(totalCost);
 }
@@ -71,11 +75,16 @@ function errorRemove() {
 
 function cartDisplay() {
   cart.pizzas.forEach(pizza => {
-    let ul = document.getElementById('cart-list')
+    let ul = document.getElementById('cart-list');
     let li = document.createElement('p');
     li.innerText = 'hi'
     ul.append(li);
   });
+}
+
+function cartReset() {
+  let ul = document.getElementById('cart-list');
+  ul.innerHTML = ''
 }
 
 window.addEventListener('load', function(){
