@@ -17,10 +17,12 @@ Pizza.prototype.getCost = function() {
 function Cart() {
   this.pizzas = [];
   this.id = 0;
+  this.cartTotal = 0;
 }
 
 Cart.prototype.addPizza = function(pizza) {
   this.pizzas.push(pizza);
+  this.cartTotal += pizza.getCost();
 }
 
 Cart.prototype.addId = function(pizza) {
