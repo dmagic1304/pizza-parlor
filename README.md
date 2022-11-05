@@ -13,7 +13,7 @@
 
 ## Description
 
-_This website was created by for purpose of demonstrating the use of Object constructors and Object.prototype.methods. Based on the pizza size and toppings selection, the website will return the total cost of the pizza._
+_This website was created by for purpose of demonstrating the use of Object constructors and Object.prototype.methods. Based on the pizza size and toppings selection, the website will return the total cost of the pizza, add the pizza to the cart and display total cart price._
 
 ## Setup/Installation Requirements
 
