@@ -54,11 +54,10 @@ function handleSubmit(e) {
   let sizeInput = getSize(document.querySelector('input[name=size]:checked'));
   let toppingInput = getToppings(document.querySelectorAll('input[type=checkbox]:checked'));
   let myPizza = new Pizza (sizeInput, toppingInput);
-  let totalCost = myPizza.getCost();
   cart.addPizza(myPizza);
   cartReset();
   cartDisplay();
-  displayCost(totalCost);
+  displayCost();
 }
 
 
@@ -66,8 +65,8 @@ function handleSubmit(e) {
 
 let cart = new Cart();
 
-function displayCost(totalCost) {
-  document.getElementById('price-output').innerText = '$' + totalCost;
+function displayCost() {
+  document.getElementById('price-output').innerText = '$' + cart.cartTotal;
 }
 
 function noToppingsError() {
