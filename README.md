@@ -100,6 +100,10 @@ Test1: "It will add input(pizza) to the pizzas property array"
 Code: Cart.prototype.addPizza(pizza1);
 Expected Output: Cart = {pizzas=[pizza1]};
 
+Test2: "It will add the total price of added pizza to the cartTotal amount"
+Code Cart.prototype.addPizza(pizza1 {totalPrice = 14});
+Expected Output: Cart = {pizzas=[pizza1], cartTotal=14};
+
 Describe: Cart.prototype.addId()
 
 Test1: "It will create new id and assign it to the pizza object"
