@@ -109,6 +109,12 @@ Describe: Cart.prototype.addId()
 Test1: "It will create new id and assign it to the pizza object"
 Code: Cart.prototype.addId();
 Expected Output: Cart = {pizzas=[pizza.id]}
+
+Describe: Cart.prototype.clearCart()
+
+Test1: "It will reset the cart properties to empty/zero'
+Code: Cart.prototype.clearCart();
+Expected Output: Cart = {pizzas=[], id=0, cartTotal=0}
 ```
 
 ## Known Bugs
