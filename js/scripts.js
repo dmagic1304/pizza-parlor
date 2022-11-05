@@ -47,6 +47,8 @@ function handleSubmit(e) {
   let toppingInput = getToppings(document.querySelectorAll('input[type=checkbox]:checked'));
   let myPizza = new Pizza (sizeInput, toppingInput);
   let totalCost = myPizza.getCost();
+  cart.addPizza(myPizza);
+  cartDisplay();
   displayCost(totalCost);
 }
 
@@ -65,6 +67,15 @@ function noToppingsError() {
 
 function errorRemove() {
   document.getElementById('no-toppings').setAttribute('class', 'hidden');
+}
+
+function cartDisplay() {
+  cart.pizzas.forEach(pizza => {
+    let ul = document.getElementById('cart-list')
+    let li = document.createElement('p');
+    li.innerText = 'hi'
+    ul.append(li);
+  });
 }
 
 window.addEventListener('load', function(){
