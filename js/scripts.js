@@ -80,7 +80,7 @@ function cartDisplay() {
   cart.pizzas.forEach(pizza => {
     let ul = document.getElementById('cart-list');
     let li = document.createElement('p');
-    li.innerText = 'hi'
+    li.innerText = 'Pizza ' + (cart.pizzas.indexOf(pizza) + 1);
     ul.append(li);
   });
 }
