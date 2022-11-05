@@ -13,40 +13,43 @@
  <div class="main container">
   <div class="selection">
     <h2>Please select the size and toppings you would like on your Pizza</h2>
-    <form>
-      <h3>Pizza size:</h3>
-      <label for="small">Small</label>
-      <input type="radio" id="small" name="size" value="10" checked><br>
-      <label for="medium">Medium</label>
-      <input type="radio" id="medium" name="size" value="15"><br>
-      <label for="large">Large</label>
-      <input type="radio" id="large" name="size" value="20"><br>
-      <h3>Toppings:</h3>
-      <input type="checkbox" id="topping1" name="topping1" value="2">
-      <label for="topping1">Pepperoni</label><br>
-      <input type="checkbox" id="topping2" name="topping2" value="3">
-      <label for="topping2">Beef</label><br>
-      <input type="checkbox" id="topping3" name="topping3" value="4">
-      <label for="topping3">Steak</label><br>
-      <input type="checkbox" id="topping4" name="topping4" value="2">
-      <label for="topping4">Pineapple</label><br>
-      <input type="checkbox" id="topping5" name="topping5" value="1">
-      <label for="topping5">Onions</label><br>
-      <input type="checkbox" id="topping6" name="topping6" value="3">
-      <label for="topping6">Mushrooms</label><br>
-      <input type="checkbox" id="topping7" name="topping7" value="2">
-      <label for="topping7">Peppers</label><br>
-
-      <button class="btn btn-dark" type="submit">Check the total price</button>
-      <button class="btn btn-primary" type="button">Add to cart</button>
-    </form>
+    <div class="row">
+      <div class="col">
+        <form>
+          <h3>Pizza size:</h3>
+          <label for="small">Small</label>
+          <input type="radio" id="small" name="size" value="10" checked><br>
+          <label for="medium">Medium</label>
+          <input type="radio" id="medium" name="size" value="15"><br>
+          <label for="large">Large</label>
+          <input type="radio" id="large" name="size" value="20"><br>
+          <h3>Toppings:</h3>
+          <input type="checkbox" id="topping1" name="topping1" value="2">
+          <label for="topping1">Pepperoni</label><br>
+          <input type="checkbox" id="topping2" name="topping2" value="3">
+          <label for="topping2">Beef</label><br>
+          <input type="checkbox" id="topping3" name="topping3" value="4">
+          <label for="topping3">Steak</label><br>
+          <input type="checkbox" id="topping4" name="topping4" value="2">
+          <label for="topping4">Pineapple</label><br>
+          <input type="checkbox" id="topping5" name="topping5" value="1">
+          <label for="topping5">Onions</label><br>
+          <input type="checkbox" id="topping6" name="topping6" value="3">
+          <label for="topping6">Mushrooms</label><br>
+          <input type="checkbox" id="topping7" name="topping7" value="2">
+          <label for="topping7">Peppers</label><br>
+          <button class="btn btn-dark" type="submit">Add to cart</button>
+        </form>
+      </div>
+      <div class="col cart-display">
+        <h2>Cart:</h2>
+      </div>
+    </div>
   </div>
   <div class="output">
     <p id="price-display">Total price is: <span id="price-output"></span></p>
     <p class="hidden" id="no-toppings">You do you, but I would suggest adding at least one topping to your Pizza!</p>
   </div>
- </div>
-
-  
+ </div>  
 </body>
 </html>
