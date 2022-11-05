@@ -30,6 +30,12 @@ Cart.prototype.addId = function(pizza) {
   pizza.id = this.id;
 }
 
+Cart.prototype.clearCart = function() {
+  this.pizzas = [];
+  this.id = 0;
+  this.cartTotal = 0;
+}
+
 function getSize(userInput) {
   let pizzaSize = userInput.value;
   return pizzaSize;
