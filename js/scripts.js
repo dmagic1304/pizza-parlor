@@ -59,11 +59,15 @@ function handleSubmit(e) {
   errorRemove();
   let sizeInput = getSize(document.querySelector('input[name=size]:checked'));
   let toppingInput = getToppings(document.querySelectorAll('input[type=checkbox]:checked'));
+  if (toppingInput.length === 0) {
+    noToppingsError();
+  } else {
   let myPizza = new Pizza(sizeInput, toppingInput);
   cart.addPizza(myPizza);
   cartReset();
   cartDisplay();
   displayCost();
+  }
 }
 
 
