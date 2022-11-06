@@ -10,7 +10,7 @@ Pizza.prototype.getCost = function() {
   if (toppingsCost === 0) {
     noToppingsError();
   }
-  let totalCost = parseInt(this.size) + parseInt(toppingsCost)
+  let totalCost = parseInt(this.size) + parseInt(toppingsCost);
   return totalCost;
 }
 
@@ -59,7 +59,7 @@ function handleSubmit(e) {
   errorRemove();
   let sizeInput = getSize(document.querySelector('input[name=size]:checked'));
   let toppingInput = getToppings(document.querySelectorAll('input[type=checkbox]:checked'));
-  let myPizza = new Pizza (sizeInput, toppingInput);
+  let myPizza = new Pizza(sizeInput, toppingInput);
   cart.addPizza(myPizza);
   cartReset();
   cartDisplay();
@@ -76,7 +76,7 @@ function displayCost() {
 }
 
 function noToppingsError() {
-    document.getElementById('no-toppings').removeAttribute('class');
+  document.getElementById('no-toppings').removeAttribute('class');
 }
 
 function errorRemove() {
@@ -94,17 +94,18 @@ function cartDisplay() {
 
 function cartReset() {
   let ul = document.getElementById('cart-list');
-  ul.innerHTML = ''
+  ul.innerHTML = '';
 }
 
 function clearCart() {
   cart.clearCart();
   cartReset();
   displayCost();
+  errorRemove();
 }
 
-window.addEventListener('load', function(){
+window.addEventListener('load', function() {
   let form = document.querySelector('form');
   form.addEventListener('submit', handleSubmit);
   document.getElementById('reset').addEventListener('click', clearCart);
-})
+});

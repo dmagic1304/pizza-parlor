@@ -88,6 +88,10 @@ Test4: "It will pass the totalCost to displayCost() that will handle display on 
 Code: handleSubmit();
 Expected Output: totalCost value displayed on UI
 
+Test5: "It will show error msg if no toppings are selected"
+Code: handleSubmit();
+Expected Output: "Please select at least one topping"
+
 Describe: Cart()
 
 Test1: "It should return a Cart object with one propertie that is set to empty array"
