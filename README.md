@@ -60,29 +60,31 @@ Describe: Pizza.prototype.getCost()
 
 Test1: "It will use toppingsTotal() to store pizza topings selection value as a toppingsCost variable and return it"
 Code: let myPizza = new Pizza('small', [1, 2, 3]); 
-      myPizza.getCost();
+      myPizza.prototype.getCost();
 Expected Output: let toppingsCost = 6;
 
 Test2: "it will return the total sum of the sizeCost and toppingsCost values"
 Code: let myPizza = new Pizza('small', [1, 2, 3]);
-      myPizza.getCost():
+      myPizza.prototype.getCost():
 Expected Output: let totalCost = 16;
 
 Describe: Cart()
 
-Test1: "It should return a Cart object with one propertie that is set to empty array"
+Test1: "It should return a Cart object with three properties pizzas = [], id = 0, cartTotal = 0 "
 Code: const cart = new Cart();
-Expected Output: Cart {pizzas: []}
+Expected Output: cart = {pizzas: [], id = 0, cartTotal = 0}
 
 Describe: Cart.prototype.addPizza()
 
 Test1: "It will add input(pizza) to the pizzas property array"
-Code: Cart.prototype.addPizza(pizza1);
-Expected Output: Cart = {pizzas=[pizza1]};
+Code: let cart = new Cart();
+      cart.prototype.addPizza(pizza1);
+Expected Output: cart = {pizzas=[pizza1]};
 
 Test2: "It will add the total price of added pizza to the cartTotal amount"
-Code Cart.prototype.addPizza(pizza1 {totalPrice = 14});
-Expected Output: Cart = {pizzas=[pizza1], cartTotal=14};
+Code: let cart = new Cart(); 
+      cart.prototype.addPizza(pizza1 {totalPrice = 14});
+Expected Output: cart = {pizzas=[pizza1], cartTotal=14};
 
 Describe: Cart.prototype.addId()
 

@@ -73,8 +73,6 @@ function handleSubmit(e) {
 
 //UI Logic
 
-// let cart = new Cart();
-
 function displayCost() {
   document.getElementById('price-output').innerText = '$' + window.cart.cartTotal;
 }
@@ -107,13 +105,6 @@ function clearCart() {
   displayCost();
   errorRemove();
 }
-
-// window.addEventListener('load', function() {
-//   let cart = new Cart();
-//   let form = document.querySelector('form');
-//   form.addEventListener('submit', handleSubmit);
-//   document.getElementById('reset').addEventListener('click', clearCart);
-// });
 
 window.addEventListener('load', () => {
   window.cart = new Cart();
