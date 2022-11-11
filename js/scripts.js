@@ -63,7 +63,7 @@ function handleSubmit(e) {
     noToppingsError();
   } else {
   let myPizza = new Pizza(sizeInput, toppingInput);
-  cart.addPizza(myPizza);
+  window.cart.addPizza(myPizza);
   cartReset();
   cartDisplay();
   displayCost();
@@ -73,10 +73,10 @@ function handleSubmit(e) {
 
 //UI Logic
 
-let cart = new Cart();
+// let cart = new Cart();
 
 function displayCost() {
-  document.getElementById('price-output').innerText = '$' + cart.cartTotal;
+  document.getElementById('price-output').innerText = '$' + window.cart.cartTotal;
 }
 
 function noToppingsError() {
@@ -88,10 +88,10 @@ function errorRemove() {
 }
 
 function cartDisplay() {
-  cart.pizzas.forEach(pizza => {
+  window.cart.pizzas.forEach(pizza => {
     let ul = document.getElementById('cart-list');
     let li = document.createElement('p');
-    li.innerText = 'Pizza ' + (cart.pizzas.indexOf(pizza) + 1) + ' $' + pizza.getCost();
+    li.innerText = 'Pizza ' + (window.cart.pizzas.indexOf(pizza) + 1) + ' $' + pizza.getCost();
     ul.append(li);
   });
 }
@@ -102,14 +102,22 @@ function cartReset() {
 }
 
 function clearCart() {
-  cart.clearCart();
+  window.cart.clearCart();
   cartReset();
   displayCost();
   errorRemove();
 }
 
-window.addEventListener('load', function() {
+// window.addEventListener('load', function() {
+//   let cart = new Cart();
+//   let form = document.querySelector('form');
+//   form.addEventListener('submit', handleSubmit);
+//   document.getElementById('reset').addEventListener('click', clearCart);
+// });
+
+window.addEventListener('load', () => {
+  window.cart = new Cart();
   let form = document.querySelector('form');
   form.addEventListener('submit', handleSubmit);
-  document.getElementById('reset').addEventListener('click', clearCart);
+  document.getElementById('reset').addEventListener('click', clearCart)
 });
