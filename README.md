@@ -70,9 +70,9 @@ Expected Output: let totalCost = 16;
 
 Describe: Cart()
 
-Test1: "It should return a Cart object with three properties pizzas = [], id = 0, cartTotal = 0 "
+Test1: "It should return a Cart object with three properties pizzas = [], cartTotal = 0 "
 Code: const cart = new Cart();
-Expected Output: cart = {pizzas: [], id = 0, cartTotal = 0}
+Expected Output: cart = {pizzas: [], cartTotal = 0}
 
 Describe: Cart.prototype.addPizza()
 
@@ -86,17 +86,11 @@ Code: let cart = new Cart();
       cart.prototype.addPizza(pizza1 {totalPrice = 14});
 Expected Output: cart = {pizzas=[pizza1], cartTotal=14};
 
-Describe: Cart.prototype.addId()
-
-Test1: "It will create new id and assign it to the pizza object"
-Code: Cart.prototype.addId();
-Expected Output: Cart = {pizzas=[pizza.id]}
-
 Describe: Cart.prototype.clearCart()
 
 Test1: "It will reset the cart properties to empty/zero'
 Code: Cart.prototype.clearCart();
-Expected Output: Cart = {pizzas=[], id=0, cartTotal=0}
+Expected Output: Cart = {pizzas=[], cartTotal=0}
 ```
 
 ## Known Bugs
