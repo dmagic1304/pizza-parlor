@@ -58,39 +58,15 @@ Expected Output: return toppingsTotal = 6;
 
 Describe: Pizza.prototype.getCost()
 
-Test1: "It will store pizza size value as a sizeCost variable"
-Code: myPizza.prototype.getCost('small');
-Expected Output: let sizeCost = 10 
-
-Test2: "It will use toppingsTotal() to store pizza topings selection value as a toppingsCost variable and return it"
-Code: myPizza.getCost(size, toppingsArray = [1, 2, 3]);
+Test1: "It will use toppingsTotal() to store pizza topings selection value as a toppingsCost variable and return it"
+Code: let myPizza = new Pizza('small', [1, 2, 3]); 
+      myPizza.getCost();
 Expected Output: let toppingsCost = 6;
 
-Test3: "it will return the total sum of the sizeCost and toppingsCost values"
-Code: myPizza.getCost(size = 10, toppingsArray = [1, 2, 3]):
+Test2: "it will return the total sum of the sizeCost and toppingsCost values"
+Code: let myPizza = new Pizza('small', [1, 2, 3]);
+      myPizza.getCost():
 Expected Output: let totalCost = 16;
-
-Describe: handleSubmit()
-
-Test1: "It will store user inputed size value using getSize()"
-Code: handleSubmit();
-Expected Output: let sizeInput = 'small'
-
-Test2: "It will store users toppings selection as array using getToppings()"
-Code: handleSubmit();
-Expected Output: let toppingsInput = [value1, value2, value3];
-
-Test3: "It will create myPizza object using Pizza constructor and pass it size and toppings properties"
-Code: handleSubmit();
-Expected Output: myPizza = {'medium', [pepperoni, cheese, onions]}
-
-Test4: "It will pass the totalCost to displayCost() that will handle display on UI"
-Code: handleSubmit();
-Expected Output: totalCost value displayed on UI
-
-Test5: "It will show error msg if no toppings are selected"
-Code: handleSubmit();
-Expected Output: "Please select at least one topping"
 
 Describe: Cart()
 
