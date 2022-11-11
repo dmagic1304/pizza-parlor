@@ -70,7 +70,7 @@ Expected Output: let totalCost = 16;
 
 Describe: Cart()
 
-Test1: "It should return a Cart object with three properties pizzas = [], cartTotal = 0 "
+Test1: "It should return a Cart object with two properties pizzas = [], cartTotal = 0 "
 Code: const cart = new Cart();
 Expected Output: cart = {pizzas: [], cartTotal = 0}
 
@@ -89,8 +89,9 @@ Expected Output: cart = {pizzas=[pizza1], cartTotal=14};
 Describe: Cart.prototype.clearCart()
 
 Test1: "It will reset the cart properties to empty/zero'
-Code: Cart.prototype.clearCart();
-Expected Output: Cart = {pizzas=[], cartTotal=0}
+Code: let cart = new Cart(pizzas=[pizza1], cartTotal=12);
+      cart.prototype.clearCart();
+Expected Output: cart = {pizzas=[], cartTotal=0}
 ```
 
 ## Known Bugs
